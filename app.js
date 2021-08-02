@@ -3,6 +3,7 @@ let input = [...inputs];
 
 input.forEach((i) => {
   i.addEventListener("change", function (e) {
+    e.preventDefault();
     let factor = this.value / this.dataset.exchange;
     input.forEach((element) => {
       element.value = element.dataset.exchange * factor.toFixed(2);
